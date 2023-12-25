@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// import Counter from "./Page/Counter";
 
-function App() {
+import ColorChange from "./Page/ColorChange";
+import ReducerForm from "./Page/ReducerForm";
+import Todo from "./Page/Todo";
+import TodoList from "./Page/TodoList";
+
+// import Form from "./Page/Form";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" flex flex-row justify-center mt-6">
+     
+      {/* <Form/> */}
+      {/* <Counter/> */}
+      {/* <Todo/> */}
+      {/* <ReducerForm/> */}
+      {/* <ColorChange/> */}
+      <TodoList/>
     </div>
   );
 }
 
-export default App;
+
