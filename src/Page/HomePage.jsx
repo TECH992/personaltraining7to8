@@ -1,6 +1,7 @@
 import Heading from '../Component/Heading/Heading';
 import Paragraph from '../Component/Paragraph/Paragraph';
 import Button from '../Component/Button/Button';
+
 const HomePage = () => {
         
         const click1 = () => {

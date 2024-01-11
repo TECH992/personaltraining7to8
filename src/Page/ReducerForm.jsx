@@ -4,6 +4,7 @@ import Paragraph from '../Component/Paragraph/Paragraph';
 import Button from '../Component/Button/Button';
 import Dropdown from '../Component/Dropdown/Dropdown';
 import { useReducer } from 'react';
+import {ContextCreation} from "../Context/ContextCreation"
 const initialValue = {
            email: '',
            password: '',
@@ -41,8 +42,10 @@ const reducerData = (state, action) => {
 };
 
 const ReducerForm = () => {
+        
            const [state, dispatch] = useReducer(reducerData, initialValue);
-
+const data=React.useContext(ContextCreation)
+console.log(data.data)
            const handleEvent = (e, data) => {
                       if (data === 'Email') {
                                  //setEmail(e.target.value);
@@ -56,7 +59,7 @@ const ReducerForm = () => {
                       }
            };
            const selectValue = (e) => {
-                      //setDropdown(e.target.value)
+                     
                       dispatch({ type: 'dropdown', payload: e.target.value });
            };
 
@@ -69,13 +72,17 @@ const ReducerForm = () => {
                       };
                       dispatch({ type: 'submit', payload: data });
            };
-           console.log(state.final);
+           console.log("render-reducer")
            return (
                       <div>
                                  <div className="border-[2px] border-[#18181B] h-[700px] w-[600px] bg-gradient-to-r  from-[#FFDB3D] to-[#FFF9B8]">
                                             <Paragraph
-                                                       ParagraphClassName="text-[44px] text-[#000] text-center font-bold underline"
-                                                       paragraphTexts="Registration-Form"
+                                                       ParagraphClassName="text-[34px] text-[#000] text-center font-bold underline"
+                                                       paragraphTexts={data.data}
+                                            />
+                                            <Paragraph
+                                                       ParagraphClassName="text-[34px] text-[#000] text-center font-bold underline"
+                                                       paragraphTexts={data.data1}
                                             />
 
                                             <div className="flex flex-row justify-center mt-12">
