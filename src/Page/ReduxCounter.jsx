@@ -4,7 +4,8 @@ import Paragraph from '../Component/Paragraph/Paragraph';
 import Button from '../Component/Button/Button';
 const ReduxCounter = () => {
 
-           const counter = useSelector((state) => state)
+           const counter = useSelector((state) => state.counter)
+           console.log(counter)
            const dispatch = useDispatch()
 
            const incrementData = () => {
