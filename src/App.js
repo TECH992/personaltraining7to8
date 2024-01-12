@@ -9,6 +9,7 @@ import TodoList from './Page/TodoList';
 import { Routes, Route } from 'react-router-dom';
 import Form from './Page/Form';
 import Counter from './Page/Counter';
+import ReduxCounter from './Page/ReduxCounter';
 import NotFound from './Page/NotFound';
 import NavBar1 from './Component/NavBar1/NavBar1';
 import Parent from './Page/Neasting/Parent';
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/refForm" element={<RefForm />} />
           <Route path="/HookesEffectUpdate" element={<HookesEffectUpdate />} />
           <Route path="/ReducerForm" element={<ReducerForm />} />
+          <Route path="/redux" element={<ReduxCounter/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
