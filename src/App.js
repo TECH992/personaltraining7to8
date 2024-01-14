@@ -15,6 +15,7 @@ import NavBar1 from './Component/NavBar1/NavBar1';
 import Parent from './Page/Neasting/Parent';
 import Child from './Page/Neasting/Child';
 import Child2 from './Page/Neasting/Child2';
+import { ToolkitCounter } from './Page/ToolkitCounter';
 export default function App() {
   return (
     <div className=" ">
@@ -35,7 +36,8 @@ export default function App() {
           <Route path="/refForm" element={<RefForm />} />
           <Route path="/HookesEffectUpdate" element={<HookesEffectUpdate />} />
           <Route path="/ReducerForm" element={<ReducerForm />} />
-          <Route path="/redux" element={<ReduxCounter/>} />
+          <Route path="/redux" element={<ReduxCounter />} />
+          <Route path="/toolkit" element={<ToolkitCounter/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
